@@ -52,3 +52,15 @@ describe('sayHiToHeadphonedRoommate(string)', function() {
     );
   });
 })
+
+describe('sayHiToGrandma(string)', function () {
+	it(`If the string that is passed into the function is all lowercase, the function should return "I can't hear you!"`, function() {
+	expect(sayHiToGrandma('hello')).toEqual("I can't hear you!")
+	})
+	it(`If the string that is passed into the function is all uppercase, the function should return "YES INDEED!"`, function() {
+		expect(sayHiToGrandma('HELLO')).toEqual('YES INDEED!')
+	})
+	it(`If the string that is passed into the function is equal to "I love you, Grandma.", the function should return "I love you, too."`, function() {
+		expect(sayHiToGrandma('I love you, Grandma.')).toEqual('I love you, too.')
+	})
+})
